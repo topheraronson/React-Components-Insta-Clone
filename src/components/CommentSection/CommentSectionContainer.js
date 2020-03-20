@@ -6,10 +6,11 @@ import "./Comment.css";
 
 const CommentSection = props => {
   // Add state for the comments
+  // const [comment, setComment] = useState(0)
 
   return (
     <div>
-      {/* map through the comments data and return the Comment component */}
+      {props.comments.map((comment, index) => <Comment comment={comment} key={index}/>)}
       <CommentInput />
     </div>
   );
